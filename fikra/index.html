@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Bénéfice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calcul de Bénéfice pour un Craft</h1>
+
+    <!-- Section pour entrer les ressources -->
+    <div id="resources-section">
+        <h2>Ressources</h2>
+        <div class="resource-box">
+            <label>Nombre de Ressources (max 10):</label>
+            <input type="number" id="resource-count" value="1" min="1" max="10" oninput="limitResourceCount()" onchange="generateResourceInputs()">
+        </div>
+        <div id="resources-inputs"></div>
+    </div>
+
+    <!-- Section pour le prix de vente -->
+    <div class="result-section">
+        <label for="selling-price">Prix de Vente de l'Objet:</label>
+        <input type="number" id="selling-price" value="0" min="0">
+    </div>
+
+    <!-- Bouton de calcul -->
+    <button onclick="calculateProfit()">Calculer le Bénéfice</button>
+
+    <!-- Affichage des résultats -->
+    <div id="results">
+        <p id="total-craft-cost">Prix du Craft: </p>
+        <p id="profit">Bénéfice: </p>
+        <p id="ratio">Ratio (Prix Vente / Prix Craft): </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
